@@ -1,0 +1,144 @@
+FizzBuzz:
+The Fizz Buzz algorithm will take in a number, and return an array of numbers from 0 to the number. 
+In that array, all numbers that are divisible by 3 will be replace with the word 'Fizz' and those divisible by 5 'Buzz'. 
+Those divisible by 3 and 5 with be replace with the word 'FizzBuzz'.
+
+The Fizz Buzz algorithm is expecting a payload with a num property 
+
+e.g. { "num": 20 } 
+
+It would respond with an array of values.
+--
+Caeser Cipher:
+The Ceaser Cipher algorithm takes in a string and a number and would shift every letter in the string by the mumber.
+
+The Ceaser Cipher algorithm is expecting a payload with a 'text' and a 'num' property
+
+e.g. { "text": "The string to shift", "num": 2 }
+
+It would respond with a string with each letter shifted 'num' places in the alphabet.
+--
+Harmless Ransom Note:
+The Harmless Ransom Note algorithm with take in a note and a text and determine if we have enough words in the magazine textto create our note.
+
+The Harmless Ransom Note algorithm is expecting a payload with a 'note' and 'magazine' property
+
+e.g. { "note":"the note", "magazine":"i'd like write a to note while the sun is up" }
+
+It would respond with true if we can create our Harmless Ransom note or false other wise.
+--
+Palindrome:
+The Palindrome algorithm will take a string as a parameter and return true if the string is a Palindrome. A Palindrome is a word that is the same forward or backwords. e.g. 'race car'.
+
+The Palindrome algorithm is expecting a payload with a 'word' property
+
+e.g. { "word" : "race car" }
+
+It would return true if it's a Palindrome or false otherwise.
+--
+Reverse Words:
+The Reversed  Words algorithm will take in a string as a parameter and reverse every word in a given string.
+
+The Reverse Words algorithm is expecting a payload with a 'word' property 
+
+e.g. { "word": "words to reverse" }
+
+It would respond with all the words reversed
+--
+Binary Search:
+The Binary Search algorithm will perform a binary for a given value inside of a list.
+
+The Binary Search algorithm is expecting a payload with a 'numArray' and 'key' property
+
+e.g. { "numArray":[3,4,7,3,2], "key": 2 }
+
+It would return true if the key exists in the list or false otherwise.
+--
+Bubble Sort:
+The Bubble Sort algorithm will perform a bubble sort on an array of numbers from least to greatest.
+
+The Bubble Sort algorithm is expecting a payload with a 'numArray' property.
+
+e.g. { "numArray": [2,6,8,3] }
+
+It would return a sorted array of numbers
+--
+Factorial:
+The Factorial algorithm would calculate the the product of all positive integers less than or equal to a given positive integer.
+
+The Factorial algorithm is expecting a payload with a 'num' property
+
+e.g. { "num" : 5 }
+
+It would return the calculated factorial value
+--
+Merge Sort:
+The Merge Sort algorithm would perform a mergesort routine on a given list of numbers sorting them least to greatest.
+
+The Merge Sort algorithm is expecting a payload with 'numArray' propery
+
+It would return an array in sorted order.
+--
+Mean Median Mode:
+The Mean Median Mode algorithm calculates the mean. median and mode for a list of numbers provided.
+
+The Mean Median Mode algorithm is expecting a payload with a 'numArray' property
+
+e.g. { "numArray": [2,5,9,23 ] }
+
+It would return an object with a mean,median and mode properties and values calculated from he 'numArray' provided
+--
+Max Stock Profit:
+The Max Stock Profit algorithm takes in an array of prices as a parameter, this represents the price
+if a single stock for the day and would return the maximum possible profit that can be made based on the values provided.
+
+The Max Stock Profit algorithm is expecting a list of price values
+
+e.g { "priceArray" : [23,4,67,34] }
+
+It would return the maximum possible profit that can be made
+--
+Reverse Array:
+The Reverse Array algorithm will reverse in place the array provided as the parameter.
+
+The Reverse Array algorithm is expecting a payload with a 'numArray' property
+
+e.g. { "numArray": [1,4,7] }
+
+It would return the array in reverse
+--
+Two Sum:
+The Two Sum algorithm would return every pair of numbers from the provided numbers array that add up to the provied sum.
+
+The Two Sum algorithm is expecting a payload with a 'numArray' and 'sum' properties
+
+e.g { "numArray": [2,5,4,3], "sum": 7 }
+
+It would return an array containing arrays of the pair of numbers from 'numArray' that add up to the 'sum' number
+--
+Sieve Of Eratosthenes:
+The Sieve of Eratosthenes algorithm would return all of the prime numbers up to a given number provided.
+
+The Sieve of Eratosthenes algorithm is expecting a payload with a 'num' property
+
+e.g. { "num" : 100 }
+
+It would return a list of all prime numbers up to 'num'
+--
+Fibonacci Memoized:
+The Fibonacci algorithm would return the fibonacci number at a given position provied as a parameter.
+
+The Fibonacci algorithm is expecting a payload with a 'position' property
+
+e.g. { "position" : 10 }
+
+It would return the fibonacci number at that position
+--
+Anagrams:
+The Anagram algorithm determines if two words or phrase consits of, are formed with, the same sets characters if rearranged. e.g cinema and iceman.
+
+The Anagram algorithm is expecting a payload with two properties 'phrase1' and 'phrase2'
+
+e.g { "phrase1": "cinema", "phrase2": "iceman" }
+
+It would return true if both words are anagrams or false otherwise
