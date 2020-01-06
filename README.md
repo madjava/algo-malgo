@@ -1,6 +1,6 @@
 # AlgoMalgo
 
-AlgoMalgo is a simple web service that implements a few algorithms and returns the comptuted results based provided parameters.
+AlgoMalgo is a simple web service that implements a few algorithms and returns the comptuted results based provided parameters. An algorithm is a process or set of steps to accomplish a certain task.
 
 The service hosts the following endpoints:
 
@@ -37,7 +37,7 @@ Is the same as `GET /` and will return a list of available algorithmic solutions
 **`GET: /info/:solution`**
 
 `:solution` here is a param value that must match one of the items in the `solution` property from the above returned list
-e.g. to get more info about the FizzBuzz algorithm hit `http://<host>:<port>/info/fizzbuzz`. This will provide more details and what parameters or properties the endpoint is expecting.
+e.g. to get more info about the FizzBuzz algorithm hit `http://<host>:<port>/info/fizzbuzz`. This will provide more details and what parameters or properties the endpoint is expecting, each endpoint accomplishes one task.
 
 **`POST: /solution/:solution`**
 
