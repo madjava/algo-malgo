@@ -15,15 +15,15 @@ const getSolutionsList = () => {
     return solutions;
 };
 
-const getSolutionInfo = (solution) => {
+const getSolutionInfo = (solution) => { 
     const solutions = solutionsInfo.split('--');
     const item = solutions.find((data) => {
-        return titleReplace(data.split(':')[0]) === solution;
+        return titleReplace(data.split(':-')[0]) === solution;
     });
     if(!item) {
         return 'NA';
     }
-    let result = item.split(':');
+    let result = item.split(':-');
     result = result[1];
     return String(result).trim();
 };

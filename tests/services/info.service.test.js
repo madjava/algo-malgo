@@ -3,10 +3,10 @@ jest.mock('fs');
 fs
     .readFileSync
     .mockReturnValueOnce('FizzBuzz\nCaeser Cipher\nHarmless Ransom Note')
-    .mockReturnValueOnce(`FizzBuzz:
+    .mockReturnValueOnce(`FizzBuzz:-
                             details 1
                             --
-                            Caeser Cipher:
+                            Caeser Cipher:-
                             details 2`);
 
 const infoService = require('../../services/info.service');

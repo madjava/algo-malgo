@@ -2,8 +2,7 @@ const SolutionNotFoundError = require('../errors/solution.error');
 const InvalidParameterError = require('../errors/invalid-parameter');
 const solutions = {};
 
-const result = async (solution, options) => {
-    let data = [];
+const loadSolution = (solution) => {
     if (!solutions[solution]) {
         try {
             const fn = require(`../solutions/${solution}.js`);
@@ -12,6 +11,12 @@ const result = async (solution, options) => {
             throw new SolutionNotFoundError(`Functionality for '${solution}' does not exist.`);
         }
     }
+};
+
+const result = async (solution, options) => {
+    let data = [];
+
+    loadSolution(solution);
 
     switch (solution) {
         case 'fizzbuzz':
@@ -62,12 +67,16 @@ const result = async (solution, options) => {
         case 'anagrams':
             data = _anagrams(solution, options);
             break;
+        case 'number-to-roman':
+            data = _numberToRoman(solution, options);
     }
 
     return data;
 };
+
+
 function _anagrams(solution, { phrase1, phrase2 }) {
-    if(!phrase1 || !phrase2){
+    if (!phrase1 || !phrase2) {
         throw new InvalidParameterError('Invalid Parameters. \'phrase1\' and \'phrase2\' properties are required.');
     }
     return solutions[solution](phrase1, phrase2);
@@ -176,6 +185,13 @@ function _fibonacciMemoized(solution, { position }) {
         throw new InvalidParameterError('Invalid Parameters. \'position\' property is required.');
     }
     return solutions[solution](position);
+}
+
+function _numberToRoman(solution, { num }) {
+    if (!num) {
+        throw new InvalidParameterError('Invalid Parameters. \'num\' property is required.');
+    }
+    return solutions[solution](num);
 }
 
 module.exports = {

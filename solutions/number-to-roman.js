@@ -28,9 +28,7 @@ function numberToRoman(num) {
             num -= map[i];
         }
     }
-
     return roman;
-
 }
 
 module.exports = numberToRoman;

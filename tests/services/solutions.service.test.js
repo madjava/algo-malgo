@@ -322,6 +322,17 @@ describe('Solutions Service', () => {
             });
         });
 
+        describe('Number To Roman', () => {
+            const solution = 'number-to-roman';
+            let options = { num: 16 }
+
+            test('should return the correct result', async () => {
+                const result = await solutionsService.result(solution, options);
+                
+                expect(result).toBe('XVI');
+            });
+        });
+
         test('should throw error for none existing solutions', async () => {
             const solution = 'none-existing';
             const options = { num: 5 };
