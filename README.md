@@ -307,3 +307,17 @@ The Anagram algorithm is expecting a payload with two properties `phrase1` and `
 ```
 
 It would return true if both words are anagrams or false otherwise
+
+### `Number To Roman`
+
+The Number To Roman algorithm converts a decimal number to Roman numerals. e.g `2 -> II`, `16 -> XVI`.
+
+The Number To Roman is expectecting a payload with a `num` property
+
+`POST: /solution/number-to-roman`
+
+```json
+{ "num" : 16 }
+```
+
+It would return the Roman numeral "XVI"
